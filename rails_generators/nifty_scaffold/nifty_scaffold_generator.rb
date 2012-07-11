@@ -5,15 +5,20 @@ class NiftyScaffoldGenerator < Rails::Generator::Base
     super
     usage if @args.empty?
 
+    #YouCentric_scaffolding: declare a pattern meta-variable
+    @singleton = false
     @name = @args.first
     @controller_actions = []
     @attributes = []
 
+    #YouCentric_scaffolding: need to test for singleton pattern
     @args[1..-1].each do |arg|
       if arg == '!'
         options[:invert] = true
       elsif arg.include? ':'
         @attributes << Rails::Generator::GeneratedAttribute.new(*arg.split(":"))
+      elsif arg == 'singleton'
+        @singleton = true
       else
         @controller_actions << arg
         @controller_actions << 'create' if arg == 'new'

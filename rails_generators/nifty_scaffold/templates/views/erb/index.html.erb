@@ -24,6 +24,12 @@
   <%% end %>
 </table>
 
-<%- if action? :new -%>
-<p><%%= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path %></p>
-<%- end -%>
+
+<% #YouCentric_scaffolding: Singleton: Test here for New Link Validity %>
+<%% if @<%= plural_name %>.length == 0 %>
+
+    <%- if action? :new -%>
+    <p><%%= link_to "New <%= singular_name.titleize %>", new_<%= singular_name %>_path %></p>
+    <%- end -%>
+
+<%% end %>
