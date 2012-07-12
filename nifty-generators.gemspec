@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name        = "nifty-generators"
-  s.version     = "0.4.6"
+  s.version     = "0.4.6b"
   s.author      = "Ryan Bates"
   s.email       = "ryan@railscasts.com"
-  s.homepage    = "http://github.com/ryanb/nifty-generators"
-  s.summary     = "A collection of useful Rails generator scripts."
+  s.homepage    = "http://github.com/astechishin/nifty-generators"
+  s.summary     = "A collection of useful Rails generator scripts slanted to formatastic."
   s.description = "A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more."
 
   s.files        = Dir["{lib,test,features,rails_generators}/**/*", "[A-Z]*"]
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'mocha', '~> 0.9.8'
   s.add_development_dependency 'bcrypt-ruby', '~> 2.1.2'
   s.add_development_dependency 'sqlite3-ruby', '~> 1.3.1'
+  s.add_development_dependency 'formtastic', '~> 2.2.1'
 
   s.rubyforge_project = s.name
   s.required_rubygems_version = ">= 1.3.4"

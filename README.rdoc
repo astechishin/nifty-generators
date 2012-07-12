@@ -2,6 +2,8 @@
 
 A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more.
 
+This variant has been localized for use in various where Formtastic is always present and used for form input
+
 
 == Setup
 
